@@ -1,7 +1,7 @@
 
 const ProductCard = ({ product }) => {
     const isSpecial = product.id % 3 === 0; // consistent mock "special" logic
-    const tagColor = product.store == 'Woolworths' ? 'bg-green-500' : product.store == 'Coles' ? 'bg-blue-500' : 'bg-yellow-500';
+    const tagColor = product.store == 'Woolworths' ? 'bg-green-500' : product.store == 'Coles' ? 'bg-red-600' : 'bg-blue-800';
 
     return (
         <div className="group bg-white rounded-2xl p-4 border border-gray-100 hover:border-emerald-100 shadow-sm hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 flex flex-col items-start gap-3">
@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-2 right-2 bg-white/90 backdrop-blur px-2 py-1 rounded-lg text-xs font-bold shadow-sm">
+                <div className={`absolute top-2 right-2 ${tagColor} text-white backdrop-blur px-2 py-1 rounded-lg text-xs font-bold shadow-sm`}>
                     {product.store}
                 </div>
                 {isSpecial && (
