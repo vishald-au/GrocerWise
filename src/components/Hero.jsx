@@ -39,7 +39,7 @@ const Hero = () => {
                             type="text"
                             value={query}
                             onChange={handleSearch}
-                            placeholder="Data-mined prices for milk, bread, eggs..."
+                            placeholder="Data-mined prices for milk, coca-cola, tim tams..."
                             className="relative w-full h-16 pl-14 pr-6 rounded-2xl border-0 bg-white shadow-xl shadow-emerald-900/5 text-lg placeholder:text-gray-400 focus:ring-2 focus:ring-emerald-500/50 transition-all"
                         />
                         <div className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400">
